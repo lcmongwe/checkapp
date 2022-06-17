@@ -1,3 +1,15 @@
 body {
   background-color: rgb(213, 201, 201);
 }
+
+/* navbar */
+nav{
+    background-color:rgb(124, 143, 188);
+    font-size:22px;
+    font-weight:bold;
+    
+}
+
+nav ul li a{
+    color:rgb(245, 239, 239);
+}

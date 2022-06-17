@@ -18,10 +18,10 @@ from .forms import RegisterUserForm
 
 # @login_required(login_url='login')
 def home(request):
-    form =RegisterUserForm
+    location1=request.user.location
+    posts=Post.objects.all().filter(location=location1)
 
-
-    return render(request, 'main/home.html', {'form': form})
+    return render(request, 'main/home.html', {'posts': posts})
 
 
 
