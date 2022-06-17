@@ -39,10 +39,11 @@ def profile(request,pk):
 
 def update_profile(request,user_id):
     user=User.objects.get(pk=user_id)
-    form=RegisterUserForm(request.POST or None,request.FILES, instance=user)
+    user1=request.user
+    form=RegisterUserForm(request.POST,request.FILES, instance=user)
     if form.is_valid():
         form.save()
-        return redirect('profile')
+        return redirect('home')
     return render(request, 'main/update_profile.html',{'user':user,'form':form})
 
 
