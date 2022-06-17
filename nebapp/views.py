@@ -37,6 +37,16 @@ def profile(request,pk):
 
 
 
+def update_profile(request,user_id):
+    user=User.objects.get(pk=user_id)
+    form=RegisterUserForm(request.POST or None,request.FILES, instance=user)
+    if form.is_valid():
+        form.save()
+        return redirect('profile')
+    return render(request, 'main/update_profile.html',{'user':user,'form':form})
+
+
+
 # AUTHENTICATION
 def login_user(request):
     if request.method == 'POST':

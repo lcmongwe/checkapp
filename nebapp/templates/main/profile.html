@@ -35,6 +35,8 @@
     {%if user.image%}
     <img src="{{user.image.url}}" alt="" width="200px" height="200px">
     {%endif%}
+      <a class="btn btn-primary btn-sm btn-block" href="{% url 'update_profile' user.id%}"
+        >Update Profile</a>
 <br>
     {{user.phone}} <br>
     {{post.email}} <br>
