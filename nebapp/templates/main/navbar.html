@@ -1,8 +1,6 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mynav" id="mynav">
-  <a class="navbar-brand" href="{% url 'home'%}">
-
-     
+  <!-- <a class="navbar-brand" href="{% url 'home'%}"> -->  
   <button
     class="navbar-toggler"
     type="button"
@@ -65,4 +63,9 @@
       </button>
     </form>
   </div>
+  <ul>
+    <li style="color: aliceblue;">
+<i class="fas fa-user fa-3x " ></i>
+      {{request.user}}</li>
+  </ul>
 </nav>
