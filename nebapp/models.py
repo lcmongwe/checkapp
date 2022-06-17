@@ -36,7 +36,9 @@ class User(AbstractUser):
 class Business(models.Model):
     name = models.CharField(max_length=200,blank=True,null=True)
     location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True,blank=True)
+    phone = models.CharField(max_length=200,blank=True,null=True)
     email = models.CharField(max_length=200,blank=True,null=True)
+    image = models.ImageField(upload_to='pics/',blank=True)
 
     def save_business(self):
         self.save()
