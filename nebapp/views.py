@@ -20,16 +20,15 @@ from .forms import RegisterUserForm
 def home(request):
     location1=request.user.location
     posts=Post.objects.all().filter(location=location1)
-    facilties=Business.objects.all().filter(location=location1)
 
-    return render(request, 'main/home.html', {'posts': posts,'facilties':facilties})
+    return render(request, 'main/home.html', {'posts': posts,})
 
 @login_required(login_url='login')
 def facilities(request):
-    location1=request.user.location
-    facilties=Business.objects.all().filter(location=location1)
+    location=request.user.location
+    facilities=Business.objects.all().filter(location=location)
 
-    return render(request, 'main/facilities.html', {'facilties': facilties})
+    return render(request, 'main/facilities.html', {'facilities': facilities})
 
 def profile(request,pk):
     user = User.objects.get(id=pk)

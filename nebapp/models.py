@@ -23,6 +23,8 @@ class User(AbstractUser):
     name = models.CharField(max_length=200,blank=True,null=True)
     location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True,blank=True)
     image = models.ImageField(upload_to='pics/',blank=True)
+    phone = models.CharField(max_length=200,blank=True,null=True)
+    email = models.CharField(max_length=200,blank=True,null=True)
    
     def save_user(self):
         self.save()
