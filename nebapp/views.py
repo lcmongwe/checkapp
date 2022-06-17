@@ -16,7 +16,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm,UserChangeForm
 from .forms import RegisterUserForm
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def home(request):
     location1=request.user.location
     posts=Post.objects.all().filter(location=location1)
