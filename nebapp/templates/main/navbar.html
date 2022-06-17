@@ -50,7 +50,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href=""> Create Profile</a>
-              <a class="dropdown-item" href=""> My Profile</a>
+              <a class="dropdown-item" href="{% url 'profile' request.user.id%}"> My Profile</a>
             </div>
           </li>
 
