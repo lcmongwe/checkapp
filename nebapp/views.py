@@ -23,6 +23,12 @@ def home(request):
 
     return render(request, 'main/home.html', {'posts': posts})
 
+@login_required(login_url='login')
+def facilties(request):
+    location1=request.user.location
+    facilties=Business.objects.all().filter(location=location1)
+
+    return render(request, 'main/home.html', {'facilties': facilties})
 
 
 
