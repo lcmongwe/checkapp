@@ -2,8 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
-class User(AbstractUser):
-    pass
+
 
 
 class Neighborhood(models.Model):
@@ -20,10 +19,9 @@ class Neighborhood(models.Model):
     def __str__(self):
         return self.name
 
-class CustomUser(models.Model):
+class User(AbstractUser):
     name = models.CharField(max_length=200,blank=True,null=True)
     location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True,blank=True)
-    email = models.CharField(max_length=200,blank=True,null=True)
     image = models.ImageField(upload_to='pics/',blank=True)
    
     def save_user(self):

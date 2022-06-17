@@ -18,8 +18,10 @@ from .forms import RegisterUserForm
 
 # @login_required(login_url='login')
 def home(request):
+    form =RegisterUserForm
 
-    return render(request, 'home.html', {})
+
+    return render(request, 'main/home.html', {'form': form})
 
 
 

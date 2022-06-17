@@ -20,6 +20,6 @@ urlpatterns =[
     path('login-user', views.login_user, name="login"),
     path('logout-user', views.logout_user, name="logout"),
     path('register-user', views.register_user, name="register"),
-    path('edit_profile', views.edit_profile, name="edit_profile"),
+    # path('edit_profile', views.edit_profile, name="edit_profile"),
 
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
