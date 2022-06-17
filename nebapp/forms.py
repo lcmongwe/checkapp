@@ -7,6 +7,29 @@ from django.forms import ModelForm
 from .models import *
 
 
+# CREATE POST FORM
+class CreatePostForm(ModelForm):
+    class Meta:
+        model= Post
+        # fields= "__all__"
+        fields=('title', 'description', 'location','image'  )
+
+        labels={
+            'title': 'Title',
+            'description':'description',
+            'location':'location',
+            'image':'image',     
+        }
+
+        widgets={
+           'title': forms.TextInput(attrs={'class': 'form-control','placeholder':'  title '}),
+           'description':forms.TextInput(attrs={'class': 'form-control','placeholder':'description'}),
+           'image':forms.URLInput(attrs={'class': 'form-control','placeholder':'enter url'}),
+
+        }
+
+
+
 
 
 # authentication forms
