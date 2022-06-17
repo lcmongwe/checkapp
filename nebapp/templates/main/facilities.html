@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %} {%load static%} {% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+{% endblock %} {% block content%}
+<div class="row">
+  <div class="col-md-7">
+
+    {% for post in facilities %}
+
+    {%if post.image%}
+    <img src="{{post.image.url}}" alt="" width="200px" height="200px">
+    {%endif%}
+<br>
+    {{post.title}} <br>
+    {{post.description}} <br>
+    {{post.author.name}} <br>
+    {{post.location.name}}
+
+    <br><br>
+
+    {%endfor%}
+  </div>
+
+  <div class="col-md-1"></div>
+</div>
+{%endblock%}
