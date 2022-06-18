@@ -7,6 +7,30 @@ from django.forms import ModelForm
 from .models import *
 
 
+
+
+# CREATE FACILITIES FORM
+class FacForm(ModelForm):
+    class Meta:
+        model= Business
+        # fields= "__all__"
+        fields=('name',  'location','phone', 'email', 'image'  )
+
+        labels={
+            'name': 'name',
+            'location': 'location',
+            'phone': 'phone',
+            'email': 'email',
+            'image':'image',     
+        }
+
+        widgets={
+           'name': forms.TextInput(attrs={'class': 'form-control','placeholder':'  name '}),
+           'email':forms.TextInput(attrs={'class': 'form-control','placeholder':'email'}),
+           'phone': forms.TextInput(attrs={'class': 'form-control','placeholder':' phone '}),
+
+        }
+
 # CREATE POST FORM
 class CreatePostForm(ModelForm):
     class Meta:
@@ -24,7 +48,6 @@ class CreatePostForm(ModelForm):
         widgets={
            'title': forms.TextInput(attrs={'class': 'form-control','placeholder':'  title '}),
            'description':forms.TextInput(attrs={'class': 'form-control','placeholder':'description'}),
-           'image':forms.URLInput(attrs={'class': 'form-control','placeholder':'enter url'}),
 
         }
 
