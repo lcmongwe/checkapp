@@ -3,7 +3,7 @@
 
 {% endblock %} {% block content%}
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3 static">
     <div class="card card-body card1">
       <h3>happening</h3>
       <a class="btn btn-primary btn-sm btn-block" href href="">view news</a>
@@ -33,11 +33,15 @@
     <img src="{{post.image.url}}" alt="" width="400px" height="400px" />
     {%endif%}
     <br />
+    <center>
     {{post.title}} <br />
     {{post.description}} <br />
     {{post.author.name}} <br />
-    {{post.location.name}}
+    {{post.location.name}} <br>
+      <a class="btn btn-danger" href="">Read More</a>
 
+
+    </center>
     <br /><br />
   </div>
 
