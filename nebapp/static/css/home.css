@@ -2,14 +2,25 @@ body {
   background-color: rgb(213, 201, 201);
 }
 
-#total-orders {
-  background-color: #4cb4c7;
+.card1{
+    background-color:rgb(124, 143, 188);
+    
 }
 
-#orders-delivered {
-  background-color: #7abecc;
+h3{
+    text-align: center;
 }
 
-#orders-pending {
-  background-color: #7cd1c0;
+.postcont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.posts{
+background-color:rgb(124, 143, 188);
+border: 5px solid rgb(124, 143, 188);
 }
