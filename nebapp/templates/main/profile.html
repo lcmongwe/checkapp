@@ -3,85 +3,72 @@
 
 {% endblock %} {% block content%}
 <div class="row">
-
   <div class="col-md-3">
-    <div class="card card-body">
-      <h3>name</h3>
-         <a class="btn btn-primary btn-sm btn-block" href="{% url 'facilities'%}"
-        >{{user.name}}</a>
-
+    <div class="card card-body card1">
+      <h4>Name</h4>
+      <p>{{user.name}}</p>
     </div>
 
     <br />
 
-    <div class="card card-body">
-      <h3>neighborhood</h3>
-      <a class="btn btn-primary btn-sm btn-block" href="{% url 'facilities'%}"
-        >{{user.location}}</a>
-    
+    <div class="card card-body card1">
+      <h4>Residence</h4>
+      <p>{{user.location}}</p>
     </div>
 
     <br />
-
-    <div class="card card-body">
-      <h3>about</h3>
+    <div class="card card-body card1">
+      <h4>Contact</h4>
+      <p>Email: {{user.email}}</p>
+      <p> Phone: {{user.phone}}  </p>
     </div>
+
   </div>
 
-  <div class="col-md-7">
-
-    
-
+  <div class="col-md-7 cold7">
     {%if user.image%}
-    <img src="{{user.image.url}}" alt="" width="200px" height="200px">
+    <img src="{{user.image.url}}" alt="" width="300px" height="300px" />
     {%endif%}
-    <br><br>
-      <a class="btn btn-primary btn-sm btn-block" href="{% url 'update_profile' user.id%}"
-        >Update Profile</a>
-<br>
-    {{user.phone}} <br>
-    {{post.email}} <br>
-
-
-    <br><br>
-
+    <br /><br />
+    <a
+      class="btn btn-primary btn-sm btn-block"
+      href="{% url 'update_profile' user.id%}"
+      >Update Profile</a
+    >
+    <br />
     
+
+    <br /><br />
   </div>
 
-  <!-- <div class="col-md-1">
-      {%for post in facilities%}
-      {{post.name}}
-      {%endfor%}
-  </div> -->
-</div>
 
+</div>
+<hr>
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+        <hr />
+    <h1>facilities in {{request.user.location}}</h1>
+    <hr />
+</div>
 <hr>
-        <h1>facilities in {{request.user.location}}</h1>
-<hr>
-        <div class="row">
-  <div class="col-md-7">
 
-    {% for post in facilities %}
+    <div class="row">
+      <div class="col-md-10 postcont">
+        {% for post in facilities %}
+        <div class="posts"> {%if post.image%}
+        <img src="{{post.image.url}}" alt="" width="300px" height="300px" />
+        {%endif%}
+        <br />
+        <span class="facilities">
+        {{post.name}} <br />
+        Contact: {{post.phone}} <br />
+        Email: {{post.email}} <br />
+       </span>
+        <br /><br />
+        </div>
+        {%endfor%}
+      </div>
 
-    {%if post.image%}
-    <img src="{{post.image.url}}" alt="" width="200px" height="200px">
-    {%endif%}
-<br>
-    {{post.name}} <br>
-    Contact:{{post.phone}} <br>
-   Email: {{post.email}} <br>
-
-    <br><br>
-
-    {%endfor%}
+    </div>
   </div>
 
-  <div class="col-md-1"></div>
-</div>
-    </div>
-    <div class="col-md-2"></div>
-</div>
 {%endblock%}

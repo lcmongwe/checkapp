@@ -1,3 +1,39 @@
 body{
-    background-color: red;
+    background-color: white;
+}
+
+.postcont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.posts{
+background-color:rgb(124, 143, 188);
+border: 2px solid rgb(124, 143, 188);
+border-radius: 5px;
+}
+
+.card1{
+    background-color:rgb(124, 143, 188); 
+    color:blue;
+    font-weight: bold;
+}
+
+h4{
+    color: antiquewhite; 
+        font-weight: bold;
+
+}
+
+.cold7 img{
+    border-radius: 250rem;
+}
+
+.facilities{
+        font-weight: bold;
+
 }
