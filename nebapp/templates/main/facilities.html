@@ -8,7 +8,7 @@
 <h1>facilities in {{request.user.location}}</h1>
     <a
       class="btn btn-outline-primary btn-sm btn-block"
-      href="{% url 'update_profile' user.id%}"
+      href="{% url 'create_facility' %}"
       >Add Facillity</a
     >
 </div>
@@ -26,6 +26,7 @@
     {{post.name}} <br>
    Contact:  {{post.phone}} <br>
     Email:  {{post.email}} <br>
+    Location:  {{post.location.name}} <br>
 </span>
     <br><br>
 </div>

@@ -11,6 +11,7 @@ urlpatterns =[
     path('profile/<str:pk>', views.profile, name="profile"),
     path('facilities',views.facilities,name='facilities'),
     path('post',views.create_post,name='post'),
+    path('create_facility',views.create_biz,name='create_facility'),
     # path('update_post/<str:pk>', views.update_post, name='update_post'),
     # path('delete_post/<str:pk>', views.delete_post, name='delete_post'),
     # path('review/<post_id>', views.review, name="review"),

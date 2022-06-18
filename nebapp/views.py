@@ -62,15 +62,15 @@ def create_post(request):
     return render(request, 'main/post.html', {'form': form})
 
 @login_required(login_url='login')
-def create_post(request):
-    form=CreatePostForm(request.POST,request.FILES)
+def create_biz(request):
+    form=FacForm(request.POST,request.FILES)
     if request.method == 'POST':
         if form.is_valid():
             form.save()
         messages.success(request,(' posted successfully!'))
         
         return redirect('home')
-    return render(request, 'main/post.html', {'form': form})
+    return render(request, 'main/createfac.html', {'form': form})
 
 
 
