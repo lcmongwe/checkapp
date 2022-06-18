@@ -35,6 +35,7 @@
     {%if user.image%}
     <img src="{{user.image.url}}" alt="" width="200px" height="200px">
     {%endif%}
+    <br><br>
       <a class="btn btn-primary btn-sm btn-block" href="{% url 'update_profile' user.id%}"
         >Update Profile</a>
 <br>
@@ -47,10 +48,40 @@
     
   </div>
 
-  <div class="col-md-1">
+  <!-- <div class="col-md-1">
       {%for post in facilities%}
       {{post.name}}
       {%endfor%}
+  </div> -->
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+<hr>
+        <h1>facilities in {{request.user.location}}</h1>
+<hr>
+        <div class="row">
+  <div class="col-md-7">
+
+    {% for post in facilities %}
+
+    {%if post.image%}
+    <img src="{{post.image.url}}" alt="" width="200px" height="200px">
+    {%endif%}
+<br>
+    {{post.name}} <br>
+    {{post.phone}} <br>
+    {{post.email}} <br>
+
+    <br><br>
+
+    {%endfor%}
   </div>
+
+  <div class="col-md-1"></div>
+</div>
+    </div>
+    <div class="col-md-2"></div>
 </div>
 {%endblock%}

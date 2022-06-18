@@ -32,8 +32,10 @@ def facilities(request):
 
 def profile(request,pk):
     user = User.objects.get(id=pk)
+    location=request.user.location
+    facilities=Business.objects.all().filter(location=location)
 
-    return render(request, 'main/profile.html', {'user': user})
+    return render(request, 'main/profile.html', {'user': user,'facilities': facilities})
 
 
 
