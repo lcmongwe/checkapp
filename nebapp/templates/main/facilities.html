@@ -1,23 +1,34 @@
 {% extends 'main/base.html' %} {%load static%} {% block styles %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<link rel="stylesheet" href="{% static 'css/facilities.css' %}" />
 
 {% endblock %} {% block content%}
+<hr>
+<div class="row row1">
+
 <h1>facilities in {{request.user.location}}</h1>
+    <a
+      class="btn btn-outline-primary btn-sm btn-block"
+      href="{% url 'update_profile' user.id%}"
+      >Add Facillity</a
+    >
+</div>
+<hr>
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-10 postcont">
 
     {% for post in facilities %}
-
+<div class="posts">
     {%if post.image%}
-    <img src="{{post.image.url}}" alt="" width="200px" height="200px">
+    <img src="{{post.image.url}}" alt="" width="400px" height="400px">
     {%endif%}
 <br>
+<span class="facilities">
     {{post.name}} <br>
-    {{post.phone}} <br>
-    {{post.email}} <br>
-
+   Contact:  {{post.phone}} <br>
+    Email:  {{post.email}} <br>
+</span>
     <br><br>
-
+</div>
     {%endfor%}
   </div>
 

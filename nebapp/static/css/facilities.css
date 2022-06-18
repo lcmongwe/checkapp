@@ -1,0 +1,23 @@
+body{
+    background-color: white;
+}
+
+.postcont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.posts{
+background-color:rgb(124, 143, 188);
+border: 2px solid rgb(124, 143, 188);
+border-radius: 5px;
+}
+
+.facilities{
+        font-weight: bold;
+
+}
