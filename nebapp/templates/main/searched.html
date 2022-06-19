@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %} {%load static%} {% block styles %}
+<link rel="stylesheet" href="{% static 'css/facilities.css' %}" />
+
+{% endblock %} {% block content%}
+<hr>
+<div class="row ">
+
+<h1>facilities in {{request.user.location}}</h1>
+    <a
+      class="btn btn-outline-primary btn-sm btn-block"
+      href="{% url 'create_facility' %}"
+      >Add Facillity</a
+    >
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-10 postcont">
+
+    {% for post in posts %}
+<div class="posts">
+    {%if post.image%}
+    <img src="{{post.image.url}}" alt="" width="400px" height="400px">
+    {%endif%}
+<br>
+<span class="facilities">
+    {{post.name}} <br>
+   Contact:  {{post.phone}} <br>
+    Email:  {{post.email}} <br>
+    Location:  {{post.location.name}} <br>
+</span>
+    <br><br>
+</div>
+<br><br>
+    {%endfor%}
+  </div>
+<br><br>
+  <div class="col-md-1"></div>
+</div>
+{%endblock%}

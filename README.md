@@ -15,7 +15,7 @@ This is a  Django program that allows a user to singup,login and log out of the 
 - A user can login and log out of the application .
 - a user can see different posts posted by others within their neighborhood
 - A user create their own profile and update.
-
+- A user cn search for various businesses in the area.
 - A user can access different facilities within their area.
 - A user can post whatever is happening in their neghborhood for others to see. 
 

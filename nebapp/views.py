@@ -73,6 +73,14 @@ def create_biz(request):
     return render(request, 'main/createfac.html', {'form': form})
 
 
+def search_biz(request):
+    if request.method == 'POST':
+        searched=request.POST.get('searched')
+        posts=Business.objects.filter(name__contains=searched)
+        return render(request, 'searched.html',{'searched':searched,'posts':posts})
+       
+    else:
+        return render(request, 'searched.html',{})
 
 
 

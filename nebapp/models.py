@@ -8,7 +8,7 @@ from django.contrib.auth.models import AbstractUser
 class Neighborhood(models.Model):
     name = models.CharField(max_length=200,blank=True,null=True)
     location = models.CharField(max_length=200,blank=True,null=True)
-    population = models.IntegerField(blank=True,null=True)
+    population = models.IntegerField(default=0)
     
     def save_neighborhood(self):
         self.save()
