@@ -77,10 +77,10 @@ def search_biz(request):
     if request.method == 'POST':
         searched=request.POST.get('searched')
         posts=Business.objects.filter(name__contains=searched)
-        return render(request, 'searched.html',{'searched':searched,'posts':posts})
+        return render(request, 'main/searched.html',{'searched':searched,'posts':posts})
        
     else:
-        return render(request, 'searched.html',{})
+        return render(request, 'main/searched.html',{})
 
 
 

@@ -21,32 +21,31 @@
     <br />
 
     <div class="card card-body card1">
-      <h3>location</h3>
-      <a class="btn btn-primary btn-sm btn-block" href href="">details</a>
+      <h3>Population</h3>
+      <a class="btn btn-primary btn-sm btn-block" href="">
+        {{user.location.user_set.count}}</a
+      >
     </div>
   </div>
 
   <div class="col-md-9 postcont">
-    {% for post in posts %} 
-      <div class="posts">
-    {%if post.image%}
-    <img src="{{post.image.url}}" alt="" width="400px" height="400px" />
-    {%endif%}
-    <br />
-    <center>
-    {{post.title}} <br />
-    {{post.description}} <br />
-    {{post.author.name}} <br />
-    {{post.location.name}} <br>
-      <a class="btn btn-danger" href="">Read More</a>
-
-
-    </center>
+    {% for post in posts %}
+    <div class="posts">
+      {%if post.image%}
+      <img src="{{post.image.url}}" alt="" width="400px" height="400px" />
+      {%endif%}
+      <br />
+      <center>
+        {{post.title}} <br />
+        {{post.description}} <br />
+        {{post.author.name}} <br />
+        {{post.location.name}} <br />
+        <a class="btn btn-danger" href="">Read More</a>
+      </center>
+      <br /><br />
+    </div>
     <br /><br />
-  </div>
-<br><br>
     {%endfor%}
-
-</div>
+  </div>
 </div>
 {%endblock%}
