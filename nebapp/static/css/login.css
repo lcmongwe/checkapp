@@ -1,0 +1,17 @@
+body {
+  background-image: url(../images/back.png);
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.8;
+}
+
+.mycard {
+  background: transparent;
+  margin-top: 10%;
+  border: 2px solid rgb(124, 143, 188);
+}
+
+.forml :hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}

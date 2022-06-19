@@ -86,6 +86,7 @@
       <ul>
         <li style="color: aliceblue">
           {{request.user}}
+          {%if request.user.image%}
           <img
             src="{{request.user.image.url}}"
             alt=""
@@ -93,6 +94,7 @@
             height="50px"
             style="border-radius: 250rem"
           />
+          {%endif%}
         </li>
       </ul>
     </nav>

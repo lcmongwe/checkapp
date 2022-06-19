@@ -25,7 +25,8 @@ class User(AbstractUser):
     image = models.ImageField(upload_to='pics/',blank=True)
     phone = models.CharField(max_length=200,blank=True,null=True)
     email = models.CharField(max_length=200,blank=True,null=True)
-   
+    # is_admin = models.BooleanField(default=False)
+
     def save_user(self):
         self.save()
 
