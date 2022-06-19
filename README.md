@@ -26,3 +26,28 @@ This is a  Django program that allows a user to singup,login and log out of the 
 - cd checkapp
 - code . or atom . depending on your text editor
 - python3 manage.py runserver
+
+### :computer: TECHNOLOGIES USED
+
+- PYTHON
+- HTML,CSS and Bootstrap
+- Django Framework
+- Postrgressql
+- MARKDOWN
+- Heroku
+
+### :pushpin: KNOWN BUGS
+No known bugs so far
+
+
+### :telephone_receiver: CONTACT INFORMATION
+
+Have any questions? reach me on:
+
+1. Twitter : @lucy_Mongwe
+2. faceboook : Lucy Mongwe
+3. Email : lcmongwe@gmail.com
+
+## licence
+MIT licence
+copyright(c)2022 Lucy Mongwe
