@@ -5,7 +5,7 @@ from . import views
 from django.urls import path
 
 urlpatterns =[
-    path('', views.home, name="home"),
+    path('home', views.home, name="home"),
     # path('landing/', views.landing, name="landing"),
     path('update_profile/<user_id>', views.update_profile, name="update_profile"),   
     path('profile/<str:pk>', views.profile, name="profile"),
@@ -19,7 +19,7 @@ urlpatterns =[
 
 
 
-    path('login-user', views.login_user, name="login"),
+    path('', views.login_user, name="login"),
     path('logout-user', views.logout_user, name="logout"),
     path('register-user', views.register_user, name="register"),
     # path('edit_profile', views.edit_profile, name="edit_profile"),

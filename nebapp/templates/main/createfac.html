@@ -20,7 +20,7 @@ there was an error with the form
 <div class="post">
   <h1>Add Facility</h1>
 
-<form action="{% url 'post'%}" method="POST" enctype="multipart/form-data">
+<form action="{% url 'create_facility'%}" method="POST" enctype="multipart/form-data">
 
     {% csrf_token %}
 
