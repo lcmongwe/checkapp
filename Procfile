@@ -1,1 +1,1 @@
-web: gunicorn nebroject.wsgi
+web: gunicorn nebprojcet.wsgi
