@@ -1,11 +1,10 @@
 body {
   background-color: rgb(213, 201, 201);
 }
-
+/* 
 .static{
-    /* background-color:red; */
     position: fixed;
-}
+} */
 
 
 .welcome{
@@ -29,7 +28,7 @@ h3{
     /* background-color: red; */
     padding: 5px;
     justify-content:space-around;
-    margin-left: 40%;
+    /* margin-left: 40%; */
 }
 
 .posts{
