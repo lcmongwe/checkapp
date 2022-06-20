@@ -5,7 +5,7 @@ Check-App
 
 ## SCREENSHOT
 
-<!-- ![MYPORTFOLIO](./awapp/static/images/screen.png) -->
+![MYPORTFOLIO](./awapp/static/images/hood.png)
 
 ### :bulb: PROJECT DESCRIPTION
 

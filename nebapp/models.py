@@ -22,7 +22,7 @@ class Neighborhood(models.Model):
 class User(AbstractUser):
     name = models.CharField(max_length=200,blank=True,null=True)
     location = models.ForeignKey(Neighborhood,on_delete=models.CASCADE,null=True,blank=True)
-    image = models.ImageField(upload_to='pics/',blank=True)
+    image = models.ImageField(default='default.jpg',upload_to='pics/')
     phone = models.CharField(max_length=200,blank=True,null=True)
     email = models.CharField(max_length=200,blank=True,null=True)
     # is_admin = models.BooleanField(default=False)
@@ -48,6 +48,10 @@ class Business(models.Model):
 
     def delete_business(self):
         self.delete()
+
+    def search_biz(cls,name):
+        return cls.objects.filter(name__icontains=name).all()
+
     
     def __str__(self):
         return self.name
