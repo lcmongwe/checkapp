@@ -10,7 +10,10 @@
 <form method="POST" action="{% url 'delete_post' post.id%}">
 
     {%csrf_token%}
-    <a href="{% url 'home'%}">cancel</a>
+    <a href="{% url 'home'%}">
+    <div class="btn btn-outline-primary">Cancel</div>
+
+    </a>
     <input type="submit" name="confirm">
 </form>
 {%endblock%}

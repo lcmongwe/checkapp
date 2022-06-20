@@ -14,8 +14,12 @@
 </div>
 <hr>
 <div class="row">
+  {%if searched%}
+  <center>
+  <h3>you searched for {{searched}}</h3> </center>
+  {%endif%}
+  
   <div class="col-md-10 postcont">
-
     {% for post in posts %}
 <div class="posts">
     {%if post.image%}

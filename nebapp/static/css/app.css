@@ -7,7 +7,7 @@ nav{
     background-color:rgb(124, 143, 188);
     font-size:22px;
     font-weight:bold;
-    position: sticky;
+    position: fixed;
     z-index: 100px;
     
 }
