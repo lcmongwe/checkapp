@@ -4,8 +4,10 @@
 {% endblock %} {% block content%}
 <hr>
 <div class="row ">
-
-<h1>facilities in {{request.user.location}}</h1>
+    <div class="col-md-2"></div>
+<center>
+<h1> Facilities And Businesses in {{request.user.location}}</h1>
+</center>
     <a
       class="btn btn-outline-primary btn-sm btn-block"
       href="{% url 'create_facility' %}"

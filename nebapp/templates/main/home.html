@@ -2,8 +2,15 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}" />
 
 {% endblock %} {% block content%}
+
+        <center> 
+    <p style="color:white; font-size:30px; font-weight:bold">Hi {{user.name}}! Welcome to {{user.location}}
+      </p>
+    </center>
 <div class="row">
+
   <div class="col-md-3 static">
+
     <div class="card card-body card1">
       <h3>happening</h3>
       <a class="btn btn-primary btn-sm btn-block" href href="">view news</a>
@@ -29,19 +36,20 @@
   </div>
 
   <div class="col-md-9 postcont">
+
     {% for post in posts %}
+
     <div class="posts">
       {%if post.image%}
       <img src="{{post.image.url}}" alt="" width="400px" height="400px" />
       {%endif%}
       <br />
-      <center>
         {{post.title}} <br />
         {{post.description}} <br />
-        {{post.author.name}} <br />
-        {{post.location.name}} <br />
+        Posted By:{{post.author.name}} <br />
+        Location: {{post.location.name}} || {{post.date_created}}<br />
         <a class="btn btn-danger" href="">Read More</a>
-      </center>
+      
       <br /><br />
     </div>
     <br /><br />

@@ -5,7 +5,7 @@ Check-App
 
 ## SCREENSHOT
 
-![MYPORTFOLIO](./nebapp/static/images/hood.png)
+![NEIGHBORHOOD](./nebapp/static/images/hood.png)
 
 ### :bulb: PROJECT DESCRIPTION
 
