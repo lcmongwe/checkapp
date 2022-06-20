@@ -4,36 +4,10 @@
 {% endblock %} {% block content%}
 
         <center> 
-    <p style="color:white; font-size:30px; font-weight:bold">Hi {{user.name}}! Welcome to {{user.location}}
+    <p style="color:white; font-size:30px; font-weight:bold"> What's Happening Around You!
       </p>
     </center>
 <div class="row">
-
-  <div class="col-md-3 static">
-
-    <div class="card card-body card1">
-      <h3>View All Posts</h3>
-      <a class="btn btn-primary btn-sm btn-block"  href="{% url 'allposts'%}">view </a>
-    </div>
-
-    <br />
-
-    <div class="card card-body card1">
-      <h3>Facilities</h3>
-      <a class="btn btn-primary btn-sm btn-block" href="{% url 'facilities'%}"
-        >view  {{user.location}} facilities</a
-      >
-    </div>
-
-    <br />
-
-    <div class="card card-body card1">
-      <h3>Population</h3>
-      <a class="btn btn-primary btn-sm btn-block" href="">
-        {{user.location.user_set.count}}</a
-      >
-    </div>
-  </div>
 
   <div class="col-md-9 postcont">
 
@@ -50,7 +24,7 @@
         Location: {{post.location.name}} || {{post.date_created}}<br />
         <center>
         <a class="btn btn-outline-danger" href="{%url 'delete_post' post.id%}">Delete</a>
-      <center>
+        </center>
       <br /><br />
     </div>
     <br /><br />

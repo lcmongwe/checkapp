@@ -24,6 +24,25 @@ def home(request):
     return render(request, 'main/home.html', {'posts': posts,})
 
 @login_required(login_url='login')
+def all_posts(request):
+    posts=Post.objects.all()
+
+    return render(request, 'main/all_posts.html', {'posts': posts,})
+
+@login_required(login_url='login')
+def delete_post( request,pk):
+    post=Post.objects.get(id=pk)
+
+    if request.method=='POST':
+        if request.user==post.author:
+            post.delete()
+            return redirect('home')
+        else:
+            messages.success(request,('you are not allowed to delete this event'))
+        
+    return render(request, 'main/delete.html', {'post':post})
+
+@login_required(login_url='login')
 def facilities(request):
     location=request.user.location
     facilities=Business.objects.all().filter(location=location)
